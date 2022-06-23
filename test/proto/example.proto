@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/bilbercode/protoc-gen-prokaf/test/pkg/example";
+
+import "github.com/bilbercode/protoc-gen-prokaf/prokaf.proto";
+
+
+message TestOne {
+  string id = 1;
+  string foo = 2;
+  option (com.bilbercode.prokaf.event) = true;
+}
+
+message TestTwo {
+  string id = 1;
+  string username = 2;
+  option (com.bilbercode.prokaf.event) = true;
+}

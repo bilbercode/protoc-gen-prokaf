@@ -1,0 +1,10 @@
+syntax = "proto2";
+package com.bilbercode.prokaf;
+
+option go_package = "github.com/bilbercode/protoc-gen-prokaf/prokaf";
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+  optional bool event = 3001;
+}
