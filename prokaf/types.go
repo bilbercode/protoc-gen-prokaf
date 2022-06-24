@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	version         = "0.1.0"
+	version         = "0.1.2"
 	headerID        = "prokaf_message_id"
 	headerType      = "prokaf_message_type"
 	headerAppliesAt = "prokaf_applies_at"
