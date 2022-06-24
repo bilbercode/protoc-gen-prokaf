@@ -85,7 +85,7 @@ func generateUnimplementedConsumer(events []*protogen.Message, g *protogen.Gener
 	g.P()
 	for _, event := range events {
 		g.P("func (*UnimplementedConsumer) Consume" + string(event.Desc.Name()) + "(_ " +
-			g.QualifiedGoIdent(ctx) + "Context, _ *" + g.QualifiedGoIdent(event.GoIdent) +
+			g.QualifiedGoIdent(prokafIndent) + "Context, _ *" + g.QualifiedGoIdent(event.GoIdent) +
 			", ack func(err error)) error {")
 		g.P("ack(nil)")
 		g.P("return nil")
